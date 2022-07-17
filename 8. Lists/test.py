@@ -1,5 +1,4 @@
 import random
-import time
 
 
 def find():
@@ -20,8 +19,8 @@ def find():
 def find2():
     numbers = [0] * 100
     for i in range(100):
-        numbers[i] = random.randint(0, 1000)
-    biggest = [0] * 105
+        numbers[i] = random.randint(0, 100)
+    biggest = [0] * 100
     counter = 0
     for i in range(100):
         for n in range(10):
@@ -40,9 +39,9 @@ def test():
 
 
 if __name__ == '__main__':
-    best = 1000
+    best = [0] * 1000
     for i in range(100000):
         current = find2()
-        if current < best:
-            best = current
-    print(best)
+        best[current - 1] += 1
+    for v, n in enumerate(best):
+        print(n)
