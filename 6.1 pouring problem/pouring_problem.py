@@ -20,3 +20,5 @@ if __name__ == '__main__':
     res = shortest_path_search((0, 0), successors(418, 986), lambda state: state == (6, 0))
     print(res)
     print('% s transitions' % (int(len(res) / 2)))
+    for i in range(10, 5, -1):
+        print(i)
